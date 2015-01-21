@@ -1,0 +1,5 @@
+language: python
+install:
+  - sudo apt-get install python-psycopg2 python-nose python-mock python-requests
+  - sudo pip install pylint
+script: make test

@@ -5,6 +5,7 @@ Copyright (c) 2014 F-Secure
 See LICENSE for details
 """
 
+from __future__ import print_function
 import copy
 import datetime
 import errno
@@ -35,7 +36,7 @@ except ImportError: # Support Py3k
     from http.server import HTTPServer, SimpleHTTPRequestHandler # pylint: disable=F0401
 
 try:
-    from systemd import daemon
+    from systemd import daemon  # pylint: disable=F0401
 except:
     daemon = None
 

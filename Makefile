@@ -8,7 +8,7 @@ PYLINT_DIRS = pglookout/ test/
 test: pylint unittest
 
 unittest:
-	PYTHONPATH=test/ nosetests --nologcapture --nocapture test/
+	PYTHONPATH=test/:$(PYTHONPATH) nosetests --nologcapture --nocapture test/
 
 unittest3:
 	PYTHONPATH=test/ nosetests --nologcapture --nocapture test/
